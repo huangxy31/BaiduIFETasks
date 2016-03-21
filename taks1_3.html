@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--任务三：三栏式布局-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+body,div{
+margin:0;
+padding:0;
+}
+
+div{
+border:1px solid #999;
+padding:20px;
+}
+
+.container{
+overflow:auto;
+background-color:#eee;
+}
+
+.teamLogoDiv{
+width:160px;
+background-color:#fff;
+float:left;
+}
+
+.teamMembersDiv{
+width:80px;
+background-color:#fff;
+float:right;
+}
+
+.teamIntroDiv{
+width:auto;
+background-color:#fff;
+margin-left:220px;
+margin-right:140px;
+padding:0 20px;
+}
+
+.teamLogoImage{
+float:left;
+margin-right:20px;
+}
+
+.memberImage{
+margin-bottom:20px
+}
+
+</style>
+</head>
+
+<body>
+<div class="container">
+<div class="teamLogoDiv">
+<img class="teamLogoImage" src="imgs/logo.gif" width="80" height="80"></img>
+<p class="teamName">小白向前冲</p>
+</div>
+
+<div class="teamMembersDiv">
+<img class="memberImage" src="imgs/member1.jpg" width="80" height="80"></img>
+<img class="memberImage" src="imgs/member2.jpg" width="80" height="80"></img>
+<img src="imgs/member3.jpg" width="80" height="80"></img>
+</div>
+
+<div class="teamIntroDiv">
+<p class="intro">正如队名，三人在前端方面都是刚入门的小白，希望能通过这次机会，学习前端知识，提升自己的前端技能。</p>
+<p class="intro">大家是来自不同学校的在校大学生，因为这次机会能相识相知也算是一种缘分，接下来我们会共同努力，共同进步！</p>
+</div>
+
+</div>
+</body>
+</html>		
