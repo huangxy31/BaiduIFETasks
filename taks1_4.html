@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--任务四：定位和居中问题-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>定位和居中问题</title>
+<style>
+body{
+	margin: 0;
+	padding: 0;
+}
+
+div{
+	background-color: #ccc;
+	height: 200px;
+	width: 400px;
+	overflow: hidden;
+	/* 居中对齐 */
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+}
+
+/* 不设置宽高在chrome中不能完全显示，画布大小不够 */
+svg{
+	height: 100%;
+	width: 100%;
+}
+
+/* 方法二
+div{
+	background-color: #ccc;
+	height: 200px;
+	width: 400px;
+	overflow: hidden;
+	/* 居中对齐 */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -100px;
+	margin-left: -200px;
+}
+*/
+
+/* 方法三
+div{
+	background-color: #ccc;
+	height: 200px;
+	width: 400px;
+	overflow: hidden;
+	/* 居中对齐 */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%); /* 有的浏览器不支持 */
+}
+*/
+
+</style>
+</head>
+
+<body>
+	<div>
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+			<circle cx="0" cy="0" r="50" fill="#fc0" />
+			<circle cx="400" cy="200" r="50" fill="#fc0" />
+		</svg> 
+	</div>
+	
+</body>
+</html>		
