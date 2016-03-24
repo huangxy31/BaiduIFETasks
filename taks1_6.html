@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--任务六：通过HTML及CSS模拟报纸排版-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>About Technology</title>
+<style>
+*{
+	margin: 0;
+	padding: 0;	
+}
+
+body{
+	margin: 0 auto;
+	width: 980px;
+	height: 1386px;
+	border: 1px solid #ccc;
+}
+
+.middle{
+	margin: 0 auto;
+}
+
+.valid{
+	width: 892px;
+}
+
+.header{
+	height: 63px;
+}
+
+.hDiv{
+	height: 61px;
+	width: 110px;
+	float: left;
+}
+
+.rPosition{
+	position: relative;
+}
+
+.pinkBGC{
+	background-color: #d45d5c;
+}
+
+.headerP{	
+	color: #ffffff;
+	padding-left: 5px;	
+	position: absolute;
+	bottom: 5px;
+}
+
+.heiti12{
+	font-family: "黑体", sans-serif;
+	font-size: 12px;
+}
+
+.headerLine{
+	border: 1px solid #938e9c;
+}
+
+.headerDate{
+	color: #d45d5c;
+	position: absolute;
+	bottom: 5px;
+	right: 0;
+}
+
+.clearFloat{
+	clear: both;
+}
+
+.marginT{
+	margin-top: 35px;
+}
+
+.mask{
+	width: 191px;
+	height: 301px;
+	background-color: green;
+	filter: alpha(opacity:30);
+	opacity: 0.3;
+}
+
+.positionLT{
+	position: absolute;
+	left:0; top: 0;
+}
+
+.positionRT{
+	position: absolute;
+	right:0; top: 0;
+}
+
+.imageGroup{
+	width: 641px;
+	height: 301px; 
+	float: left;
+}
+
+.titleGroup{
+	width: 203px;
+	height: 100px;
+	float: right;
+	border:  1px solid #938e9c;
+}
+</style>
+</head>
+
+<body>
+<div class="valid middle">
+	<div class="header rPosition middle">
+		<div class="hDiv rPosition pinkBGC">
+			<p class="headerP heiti12">ife.baidu.com</p>
+		</div>
+		<p class="headerDate heiti12">2016.03</p>
+		<hr class="headerLine clearFloat" />
+	</div>
+	
+	<div class="contain middle marginT rPosition">
+		<div class="imageGroup rPosition">	
+			<image class="positionLT" src="imgs/task1_6/computer.jpg" width="641" height="301" alt="computer"></image>
+			<div class="mask positionLT"></div>
+			<div class="mask positionRT" style="background-color: red;" ></div>
+		</div>
+		<div class="titleGroup">
+		</div>
+	</div>
+	
+	<div class="footer">
+	</div>
+</div>
+</body>
+</html>		
