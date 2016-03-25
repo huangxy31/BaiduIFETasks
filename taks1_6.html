@@ -71,11 +71,11 @@ body{
 	clear: both;
 }
 
-.marginT{
+.contain{
 	margin-top: 35px;
 }
 
-.mask{
+#imageGroup .mask{
 	width: 191px;
 	height: 301px;
 	background-color: green;
@@ -93,30 +93,29 @@ body{
 	right:0; top: 0;
 }
 
-.imageGroup{
+#imageGroup{
 	width: 641px;
 	height: 301px; 
 	float: left;
 }
 
 .titleGroup{
-	height: auto;
+	height: 301px;
 	width: 203px;
 	float: right;
 }
 
 .bigAt{	
 	margin-top: 10px;
-	font-size: 18px;
+	font-size: 24px;
+	font-variant: small-caps;
 	line-height: 30px;
 	text-decoration: underline;
 }
 
-p span{
-	font-size: 24px;
-}
 
 .kaitiAT{
+	padding-top: 5px;
 	font-size: 12px;
 	font-family: "楷体", sans-serif;
 	line-height: 10px;
@@ -128,26 +127,187 @@ p.big{
 	font-size: 116px;
 	color: #75b86b;
 }
-span.big{
+.titleGroup span.big{
 	float: left;
 	font-size: 55px;
 	color: #cc8091;	
+	position: relative;
+	bottom: 7px;
 }
-span.medium{
-	position:
+.titleGroup span.medium{
 	font-size: 21px;
 	color: #cc8091;
+	position: absolute;
+	bottom: -3px;
 }
-span.small{
+.titleGroup span.small{
 	display: block;
 	font-size: 12px;
 	color: #cc8091;
 }
+
+.middleText{
+	clear: both;
+	padding-top: 35px;
+	width: 700px;
+}
+
+.middleText div{
+	width: 28%;
+	float: left;
+	padding-right: 30px;
+}
+
+.middleText h3{
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.left>h3{color: #418c59;}
+.middle>h3{color: #d2994f;}
+.right>h3{color: #cc7680;}
+
+.middleText p, .middleText span{
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.left>p{	
+	font-family: "宋体", sans-serif;
+	color: #767777;
+}
+
+.middle>p{
+	color: #767777;
+	filter: alpha(opacity:70);
+	opacity: 0.7;
+}
+
+span.percent{
+	color: #cd4a48;
+	font-style: italic;
+	filter: alpha(opacity:70);
+	opacity: 0.7;
+}
+
+div.bottom{
+	clear: both;
+	padding-top: 35px;
+}
+
+div.bottom .left{
+	width: 415px;
+	float: left;
+}
+
+div.bottom .right{ 
+	width: 458px;;
+	float: right;	
+	position: relative;
+}
+
+div.left h1, div.left h2{
+	font-family: "黑体", sans-serif;
+	font-weight: bold;
+	font-size: 42px;
+	margin-bottom: 16px;
+	line-height: 100%;
+	color: #11456b;
+}
+
+h1>span{
+	color: #f5e327;
+	font-family: "黑体", sans-serif;
+	font-size: 72px;
+	font-style: italic;
+}
+
+.bottom .left h2{font-size: 33px;}
+.bottom .left hr{border: 1px solid #11456b; margin-bottom: 16px;}
+
+.bottom .left p{
+	font-family: "宋体", sans-serif;
+	font-size: 12px;
+	color: #767777;
+	line-height: 180%;
+	text-indent: 24px;
+}
+.bottom .left p>span{
+	float: left;
+	font-family: "微软雅黑", sans-serif;
+	font-size: 70px;
+	color: #f5e327;
+	line-height:80%;
+	padding-right: 10px;
+	padding-bottom: 10px;	
+}
+
+
+.bottom .left img{float: right}
+
+
+#picMask{
+	width: 458px;
+	height: 257px;	
+	position: relative;
+}
+
+#picMask div{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 61px;
+}
+
+#picMask .mask{
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	filter: alpha(opacity:30);
+	opacity: 0.3;
+}
+
+#picMask .text{
+	position: absolute;
+	top: 50%;
+	left: 20px;
+	margin-top: -22px;
+}
+
+#picMask div>hr{
+	height: 44px;
+	width: 3px;
+	border: none;
+	background-color: #72b16a;
+	float: left;
+	margin-right: 10px;
+}
+
+#picMask .big{
+	font-size: 26px;
+	color: #ffffff;
+}
+
+#picMask .small{
+	font-size: 12px;
+	color: #72b16a;
+	font-style: italic;
+	letter-spacing: 1.4px;
+}
+
+.right>div.text{
+	background-color: grey;
+	width: 459px;
+	height: 318px;
+	margin-top: 35px;
+}
+
 </style>
 </head>
 
 <body>
-<div class="middle" width="892">
+<div class="middle" style="width: 892px;">
 	<div class="header rPosition middle">
 		<div class="hDiv rPosition pinkBGC">
 			<p class="headerP heiti12">ife.baidu.com</p>
@@ -156,19 +316,78 @@ span.small{
 		<hr class="headerLine clearFloat" />
 	</div>
 	
-	<div class="contain middle marginT rPosition">
-		<div class="imageGroup rPosition">	
+	<div class="contain middle rPosition">
+		<div id="imageGroup"" class="rPosition">	
 			<image class="positionLT" src="imgs/task1_6/computer.jpg" width="641" height="301" alt="computer"></image>
 			<div class="mask positionLT"></div>
 			<div class="mask positionRT" style="background-color: red;" ></div>
 		</div>
-		<div class="titleGroup">
+		<div class="titleGroup rPosition">
 			<hr class="headerLine" style="border-color:#cc8091">
-			<p class="bigAt"><span>A</span>BOUT<br/><span>T</span>ECHNOLOGY</p>
+			<p class="bigAt">About<br/>Technology</p>
 			<p class="kaitiAT"><i>About technology about technology<br/>about technology</i></p>
 			<p class="big"><i>700</i></p>
 			<span class="big">3.2</span>
 			<span class="medium">css<span class="small">cssssccsss</span></span>
+		</div>
+		
+		<div class="middleText">
+			<div  class="left">
+				<h3>What</h3>
+				<p>前端前端端前端前端前前端前前端前端前端端前端前端前端前前端前端前端前端前端前端前端前端前前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端</p>
+			</div>
+			<div  class="middle">
+				<h3>When</h3>
+				<p>前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端</p>
+			</div>
+			<div  class="right">
+				<h3>How</h3>
+				<p>前端前端前端前端前端前端前端前端前端前端前端前</p><br/>
+				<span>What--------</span><span class="percent">40%</span><br/>
+				<span>What--------</span><span class="percent">30%</span><br/>
+				<span>What--------</span><span class="percent">30%</span><br/>
+			</div>
+		</div>
+		
+		<div class="bottom">
+			<div class="left">
+				<h1><span>THE</span> TECHNOLOGY OF FRONT</h1>
+				<h2>前端技术领域</h2>
+				<hr/>
+				<p style="text-indent:0;"><span>前</span>端前端前前端端前端前端前前端前端前端前端前端前前端前端前前端前端前端前端前端前前端前端前端前端前端前端前前端前端前端前端前端前端前前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前</p>
+				<image src="imgs/task1_6/pic3.jpg" width="167" height="288" alt="pic"></image>
+				<p>前端前端前端端前端前端前前端前端前端前端前端前前端前端前端前端前端前前端前端前端前端前端前前端前端前前端前端前端前前端前端前端前端前端前端前前端前端前端前端前端前端前前端前端前端前端前端前端前前端前端前端前端前端前端前前端前端前端前端前端前端前前端前端前端前端前端前端前</p>
+				<p>前端前端前端前端前端前端前端前前端前端前端前端前端前前端前端前端前端前端前前端前端前端前端前端前前端前端前端前端前端前前端前端前端前端前端前前端前端前端前端前前端前端前端前端前端前端端前端前端前前端前端前端前端前端前前端前端前端前端前端前前端前端前端前端前端前前端前端前端前端前端前前端前端前前前端前端前端前端前端前端前前端前端前端前端前端前端前前端前端前端前端前端前端前前端前端前端前端前端前端前前端前端前端前端前端前端前</p>
+				
+			</div>
+			<div class="right">
+				<div id="picMask">	
+					<div>
+						<div class="mask"></div>
+						<div class="text">
+							<hr/>
+							<span class="big">前端技术</span>
+							<span class="small">前端技术前端技术</span>
+						</div>
+					</div>
+					<image src="imgs/task1_6/pic2.jpg" width="458" height="257" alt="pic"></image>
+				</div>
+				<div class="text">
+					<ul>
+						<li>前端前端前端前端……………………前端</li>
+						<li>前端前端前端前端……………………前端</li>
+						<li>前端前端前端前端……………………前端</li>
+					</ul>
+					<div class="red">
+						<span>0</span>
+						<hr/>
+						<p>ONE TWO</p>
+						<p>THREE FOUR FIVE</p>
+						<p>hello world hello world hello world</p>
+					</div>
+					<p>"world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world"</p>
+				</div>
+			</div>
 		</div>
 	</div>
 	
