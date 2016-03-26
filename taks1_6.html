@@ -14,7 +14,6 @@ body{
 	margin: 0 auto;
 	width: 980px;
 	height: 1386px;
-	border: 1px solid #ccc;
 	font-family: "微软雅黑", sans-serif;
 }
 
@@ -122,7 +121,7 @@ body{
 	color: #676767;
 }
 
-p.big{
+.titleGroup p.big{
 	margin-left: -20px;
 	font-size: 116px;
 	color: #75b86b;
@@ -193,15 +192,16 @@ span.percent{
 
 div.bottom{
 	clear: both;
-	padding-top: 35px;
+	overflow: hidden;
+	padding-top: 70px;
 }
 
-div.bottom .left{
+div.bottom div.left{
 	width: 415px;
 	float: left;
 }
 
-div.bottom .right{ 
+div.bottom div.right{ 
 	width: 458px;;
 	float: right;	
 	position: relative;
@@ -275,7 +275,7 @@ h1>span{
 	margin-top: -22px;
 }
 
-#picMask div>hr{
+hr.vertical{
 	height: 44px;
 	width: 3px;
 	border: none;
@@ -297,10 +297,125 @@ h1>span{
 }
 
 .right>div.text{
-	background-color: grey;
+	background-color: #eeedd6;
 	width: 459px;
 	height: 318px;
 	margin-top: 35px;
+	position: relative;
+}
+
+.right .list{
+	width: 300px;
+	margin: 0 auto;
+	padding-top: 20px;
+	list-style-type:none;
+	font-size: 16px;
+	color: #5a5b5b;
+}
+
+.list li{
+	margin-bottom: 20px;
+	background-image:url(imgs/task1_6/list.png);
+	background-repeat:no-repeat;
+	background-position:0px 8px; 
+	padding-left: 14px;	
+}
+
+li span{
+	font-family: "宋体", sans-serif;
+	font-size: 12px;
+	font-style: italic;
+}
+
+div.red{
+	position: absolute;
+	bottom: 0; left: 0;
+	width: 260px;
+	height: 160px;
+	background-color: #d45d5c;
+}
+
+div.red span{
+	font-size: 110px;
+	color: #ffffff;
+}
+
+div.red hr{
+	height: 86px;
+	width: 2px;
+	background-color: white;
+	border: none;
+	position: absolute;
+	top: 50%;
+	margin-top: -43px;
+	margin-left: 70px;
+}
+
+div.red div{
+	position: absolute;
+	top: 50%;
+	margin-top: -43px;
+	margin-left: 80px;
+	font-family: "黑体", sans-serif;
+	color: #ffffff;
+}
+
+div.red p.big{
+	font-size: 21px;
+	font-style: italic;
+}
+
+div.red p.small{
+	font-size: 12px;
+}
+
+#quote{
+	position: absolute;
+	bottom: 0; right: 0;
+	width: 40%;
+}
+
+#quote>p{
+	font-size: 14px;
+	font-family: "黑体",sans-serif;
+	font-style: italic;
+	color: #5a5b5b;
+}
+
+#quote p{
+	float: right;
+}
+
+#quote span{
+	font-family: "黑体",sans-serif;
+	font-size: 72px;
+	color: #d45d5c;
+	font-style: normal;
+}
+
+span.left{
+	position: absolute;
+	left: -40px;
+	top: 10px
+}
+
+.footer{
+	claer: both;
+	margin-top: 35px;
+}
+
+.footer.hr{
+	height: 1px;
+	width: 100%;
+	background-color: black;
+	border: none;
+}
+
+.footer p{
+	float: right;
+	font-family: "黑体",sans-serif;
+	font-size: 12px;
+	color: #d45d5c;
 }
 
 </style>
@@ -365,7 +480,7 @@ h1>span{
 					<div>
 						<div class="mask"></div>
 						<div class="text">
-							<hr/>
+							<hr class="vertical"/>
 							<span class="big">前端技术</span>
 							<span class="small">前端技术前端技术</span>
 						</div>
@@ -373,25 +488,33 @@ h1>span{
 					<image src="imgs/task1_6/pic2.jpg" width="458" height="257" alt="pic"></image>
 				</div>
 				<div class="text">
-					<ul>
-						<li>前端前端前端前端……………………前端</li>
-						<li>前端前端前端前端……………………前端</li>
-						<li>前端前端前端前端……………………前端</li>
+					<ul class="list">
+						<li>前端前端前端前端……………………<span>前端</span></li>
+						<li>前端前端前端前端……………………<span>前端</span></li>
+						<li>前端前端前端前端……………………<span>前端</span></li>
 					</ul>
 					<div class="red">
 						<span>0</span>
 						<hr/>
-						<p>ONE TWO</p>
-						<p>THREE FOUR FIVE</p>
-						<p>hello world hello world hello world</p>
+						<div>
+							<p class="big">ONE TWO</p>
+							<p class="big">THREE FOUR FIVE</p>
+							<p class="small">hello world hello world hello world</p>
+						</div>
 					</div>
-					<p>"world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world"</p>
+					<div id="quote">
+						<span class="left">“</span>
+						<p>world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world</p>
+						<span class="right">”</span>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	
 	<div class="footer">
+		<hr/>
+		<p>ife.baidu.com</p>
 	</div>
 </div>
 </body>
