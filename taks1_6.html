@@ -373,6 +373,7 @@ div.red p.small{
 	position: absolute;
 	bottom: 0; right: 0;
 	width: 40%;
+	height: 140px;
 }
 
 #quote>p{
@@ -382,9 +383,7 @@ div.red p.small{
 	color: #5a5b5b;
 }
 
-#quote p{
-	float: right;
-}
+
 
 #quote span{
 	font-family: "黑体",sans-serif;
@@ -393,14 +392,22 @@ div.red p.small{
 	font-style: normal;
 }
 
-span.left{
+#quote span.left{
+	width: 80px;
+	height: 20px;
+	margin-left: -40px;
+	margin-top: -15px;
+	float: left;
+}
+
+#quote span.right{
 	position: absolute;
-	left: -40px;
-	top: 10px
+	right: -20px;
+	bottom: -20px;
 }
 
 .footer{
-	claer: both;
+	clear: both;
 	margin-top: 35px;
 }
 
@@ -504,7 +511,7 @@ span.left{
 					</div>
 					<div id="quote">
 						<span class="left">“</span>
-						<p>world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world</p>
+						<p>world hello world hello world hello world  world hello world hello world hello world hello world hello world hello world</p>
 						<span class="right">”</span>
 					</div>
 				</div>
