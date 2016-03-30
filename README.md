@@ -16,5 +16,5 @@
 
 * 任务六：通过HTML及CSS模拟报纸排版
     * 任务说明：http://ife.baidu.com/task/detail?taskId=6
-    * 代码地址：https://github.com/huangxy31/BaiduIFETasks/blob/master/taks1_6.html
+    * 代码地址：https://github.com/huangxy31/BaiduIFETasks/blob/gh-pages/taks1_6.html
     * demo地址：http://huangxy31.github.io/BaiduIFETasks/taks1_6.html  
