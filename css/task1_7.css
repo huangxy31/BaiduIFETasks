@@ -97,7 +97,7 @@ body {
 	margin-top: 10px;
 }
 
-#contain1 .button{
+#contain1 button{
 	height: 65px;
 	width: 331px;
 	font-family: "微软雅黑", sans-serif;
@@ -230,7 +230,7 @@ select::-ms-expand { display: none; }
 }
 
 #contain5 .container{
-	width: 1100px;
+	width: 1006px;
 	height: 400px;
 }
 
@@ -268,5 +268,227 @@ select::-ms-expand { display: none; }
 	margin-bottom: 6px;
 }
 
+#contain6, #contain6 .container{
+	height: 567px;
+}
+#contain6 .container .left{
+	float: left;
+	background-image: url(../imgs/task1_7/pic7.jpg);
+	height: 100%;
+	width: 66.4%;
+	position: relative;
+}
 
+#contain6 .container .left img{
+	position: absolute;
+	right: 0; top: 268px;
+}
 
+#contain6 .container .left div{
+	height: 280px;
+	width: 380px;
+	text-align: center;
+	color: white;
+}
+
+#contain6 h3{
+	font-size: 49px;
+	font-weight: normal;
+}
+
+#contain6 h2{
+	font-size: 157px;
+	font-weight: normal;
+	line-height: 100%;
+	margin-bottom: 35px;
+}
+
+#contain6 .container .left p{
+	font-size: 22px;
+	margin-bottom: 15px;
+}
+
+#contain6 .container .right{
+	float: left;
+	height: 100%;
+	width: 33%;
+	position: relative;
+}
+
+#contain6 .container .right>div{
+	height: 300px;
+	width: 60%;
+	text-align: center;
+}
+
+#contain6 h4{
+	font-size: 18px;
+	margin-bottom: 31px;
+}
+
+#contain6 span{
+	color: red;
+}
+
+#contain6 .right p{
+	color: #999999;
+	font-size: 13px;
+	text-align: left;
+	margin-bottom: 50px;
+}
+
+button.red{
+	background-color: white;
+	width: 107px;
+	height: 35px;
+	border: solid 1px rgb(233,123,134);
+	color: rgb(233,123,134);
+	margin-bottom: 30px;
+}
+
+.circleGroup{
+	width: 100%;
+	text-align: center;
+	margin-left: 96px;
+}
+
+.circle{
+	float: left;
+	width: 12px;
+	height: 12px;
+	border: solid 1px rgb(146,146,146);
+	border-radius: 6px;
+	margin-right: 14px;
+}
+
+.circle:last-child{
+	margin-right: 0;
+}
+
+.circle:hover{
+	cursor: pointer;
+	background-color: rgb(146,146,146);
+}
+
+div.select{
+	background-color: rgb(146,146,146);
+}
+
+/*
+#contain7 .container{
+	width: 100%;
+	height: 521px;
+}
+
+#contain7 .container>div{
+	width: 33%;
+	height: 100%;
+	float: left;
+	border: solid 1px red;
+}
+*/
+
+#contain8{
+	margin-top: 50px;
+	clear: both;
+	height: 320px;
+	width: 100%;
+}
+
+#contain8 .container{
+	height: 100%;
+	width: 78%;
+	margin: 0 auto;
+}
+
+#contain8 .container .left{
+	float: left;
+	height: 100%;
+	width: 290px;
+}
+
+#contain8 .container .left h6{
+	font-family: "黑体", sans-serif;
+	font-size: 14px;
+	color: #231815;
+	font-weight: normal;
+	margin-bottom: 27px;
+}
+
+#contain8 .container .left p, #contain8 .container .left a{
+	font-family: "宋体", sans-serif;
+	font-size: 12px;
+	color: #9a9b9b;
+}
+
+#contain8 .container .left p{padding-bottom: 18px;}
+#contain8 .container .left img{padding-right: 10px;}
+	
+#contain8 .container .left>div{
+	height: auto;
+	position: relative;
+	margin-bottom: 40px;
+}
+#contain8 .container .left a{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	text-decoration:none;
+}
+
+#contain8 .container .right{
+	float: right;
+	height: 100%;
+	width: 650px;
+}
+
+#contain8 .container .right *{
+	border: none;
+	outline: none;
+	background-color: rgb(237,237,237);
+	font-family: "宋体", sans-serif;
+	font-size: 12px;
+	color: #938E9C;
+}
+
+#contain8 .input{
+	float: left;
+	width: 311px;
+	height: 41px;
+	margin-bottom: 13px;
+	text-indent: 10px;
+}
+
+#contain8 input{
+	height: 100%;
+	width: 70%;
+}
+
+#contain8 .margin-right{margin-right: 22px;}
+
+.dream-life{
+	clear: both;
+	margin-bottom: 17px;
+}
+
+.dream-life p{
+	text-indent: 10px;
+	line-height: 30px;
+}
+#life{
+	margin-left: 20px;
+	width: 90%;
+	height: 121px;
+}
+
+#contain8 .right button{
+	width: 100%;
+	height: 41px;
+	font-size: 14px;
+	font-family: "黑体", sans-serif;
+	color: #323333;
+}
+
+button{
+	cursor: pointer;
+}
