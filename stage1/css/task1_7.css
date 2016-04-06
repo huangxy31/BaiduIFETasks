@@ -1,0 +1,495 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑", sans-serif;
+}
+
+body {
+	width: 1280px;
+	margin: 0 auto;
+}
+
+.vMiddle{
+	margin: 0 auto;
+}
+
+.hMdidle{
+	margin: auto;
+	position: absolute;
+	left: 0; right: 0; top: 0; bottom: 0;
+}
+
+#header {
+	height: 56px;
+	position: relative;
+}
+
+#header .container {
+	padding-top: 15px;
+}
+
+#header img {
+	float: left;
+}
+
+#header table {
+	height: 100%;
+	width: auto;
+	position: absolute;
+	right: 0;
+	top: 1px;
+}
+
+#header td {
+	width: 100px;
+	height: 100%;
+	font-family: "微软雅黑", sans-serif;
+	font-size: 14px;
+	text-align: center;
+	color: #787b83;
+	border-bottom: 3px solid white;
+}
+
+#header td.select {
+	color: rgb(231, 79, 77);
+	border-bottom: 3px solid rgb(231, 79, 77);
+}
+
+#header td:hover {
+	border-bottom: 3px solid rgb(231, 79, 77);
+}
+
+#header td img {
+	position: relative;
+	left: 20px;
+}
+
+#contain1 .container{
+	width: 100%;
+	height: 690px;
+	position: relative;
+}
+
+#contain1 .mask{
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.2;
+	position: absolute;
+	top: 0; left: 0;
+}
+
+#contain1 .right{
+	position: absolute;
+	top: 40%; left: 10%;
+}
+
+#contain1 h1{
+	font-family: "微软雅黑", sans-serif;
+	font-size: 60px;
+	font-weight: normal;
+	color: white;	
+}
+
+#contain1 p{
+	font-family: "微软雅黑", sans-serif;
+	font-size: 21px;
+	color: white;
+	margin-top: 10px;
+}
+
+#contain1 button{
+	height: 65px;
+	width: 331px;
+	font-family: "微软雅黑", sans-serif;
+	font-size: 30px;
+	color: white;
+	background-color: rgb(231, 79, 77);
+	border: none;
+	margin-top: 60px;
+}
+
+#contain2{
+	position: relative;
+	height: 250px;
+}
+#contain2 .container{
+	height: 140px;		
+}
+
+#contain2 .container>div{
+	float: left;
+	width: 25%;
+}
+
+#contain2 p{
+	width: 155px;
+	font-family: "黑体", sans-serif;
+	font-size: 14px;
+	color: #767777;
+	margin-top: 30px;
+}
+
+#contain3 .container{
+	height: 360px;
+	text-align: center;
+	background-color: rgb(237, 237, 237);
+}
+
+#contain3 img{
+	margin-top: 89px;
+}
+
+#contain3 p{
+	font-family: "黑体", sans-serif;
+	font-size: 54px;
+	color: rgb(161, 161, 161);
+	margin-top: 48px;
+}
+
+#contain4 .container{
+	height: 340px;
+	text-align: center;
+	position: relative;
+}
+
+#contain4 .info{
+	height: 50%;
+}
+
+#contain4 h3{
+	font-family: "微软雅黑", sans-serif;
+	font-size: 21px;
+	color: white;
+	font-weight: normal;
+	margin-bottom: 33px;
+}
+
+#contain4 p{
+	font-family: "微软雅黑", sans-serif;
+	font-size: 12px;
+	color: white;
+	margin-bottom: 53px;
+}
+
+#contain4 select{
+	/*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+ 	border: 1px solid rgb(190, 78, 72);
+
+  	/*很关键：将默认的select选择框样式清除*/
+  	appearance:none;
+  	-moz-appearance:none;
+  	-webkit-appearance:none;
+
+  	/*在选择框的最右侧中间显示小箭头图片
+  	background: url(../imgs/task1_7/下拉.png) no-repeat scroll right center transparent;
+  	
+  	background-image: url(../imgs/task1_7/下拉.png);
+	background-repeat:no-repeat;*/
+	background: url(../imgs/task1_7/下拉.png) no-repeat center transparent;
+	background-position-x: 200px;
+
+  	/*为下拉小箭头留出一点位置，避免被文字覆盖*/
+  	padding-left: 10px;
+  	
+  	width: 236px;
+  	height: 36px;
+  	margin-right: 28px;
+  	text-align: center;
+  	font-family: "微软雅黑", sans-serif;
+	font-size: 12px;
+	color: #323333;
+	background-color: white;
+}
+
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+select::-ms-expand { display: none; }
+
+#contain4 option{
+	background-color: rgb(227, 227, 227);
+	color: #a8aaaa;
+	border: 1px solid rgb(190, 78, 72);
+	text-indent: 20px;
+}
+
+#contain4 button{
+	width: 236px;
+  	height: 36px;
+  	border: none;
+  	background-color: rgb(190, 78, 72);
+  	font-family: "微软雅黑", sans-serif;
+	font-size: 14px;
+	color: white;
+	letter-spacing: 40px;
+	text-indent: 40px;
+}
+
+#contain5{
+	height: 600px;
+	background-color: rgb(247, 247, 247);
+	position: relative;
+}
+
+#contain5 .container{
+	width: 1006px;
+	height: 400px;
+}
+
+#contain5 .container>div{
+	float: left;
+	margin-right: 37px;
+	text-align: center;
+}
+
+#contain5 .container>div:last-child{
+	margin-right: 0;
+}
+
+#contain5 h5{
+	font-size: 16px;
+	color: #323333;
+	font-weight: normal;
+	margin-bottom: 6px;
+	margin-top: 6px;
+}
+
+#contain5 h5.big{
+	font-size: 22px;
+	margin-top: 0;
+	letter-spacing: 30px;
+	text-indent: 30px;
+}
+
+#contain5 p{
+	font-size: 13px;
+	color: #767777;
+}
+
+#contain5 p.big{
+	margin-bottom: 6px;
+}
+
+#contain6, #contain6 .container{
+	height: 567px;
+}
+#contain6 .container .left{
+	float: left;
+	background-image: url(../imgs/task1_7/pic7.jpg);
+	height: 100%;
+	width: 66.4%;
+	position: relative;
+}
+
+#contain6 .container .left img{
+	position: absolute;
+	right: 0; top: 268px;
+}
+
+#contain6 .container .left div{
+	height: 280px;
+	width: 380px;
+	text-align: center;
+	color: white;
+}
+
+#contain6 h3{
+	font-size: 49px;
+	font-weight: normal;
+}
+
+#contain6 h2{
+	font-size: 157px;
+	font-weight: normal;
+	line-height: 100%;
+	margin-bottom: 35px;
+}
+
+#contain6 .container .left p{
+	font-size: 22px;
+	margin-bottom: 15px;
+}
+
+#contain6 .container .right{
+	float: left;
+	height: 100%;
+	width: 33%;
+	position: relative;
+}
+
+#contain6 .container .right>div{
+	height: 300px;
+	width: 60%;
+	text-align: center;
+}
+
+#contain6 h4{
+	font-size: 18px;
+	margin-bottom: 31px;
+}
+
+#contain6 span{
+	color: red;
+}
+
+#contain6 .right p{
+	color: #999999;
+	font-size: 13px;
+	text-align: left;
+	margin-bottom: 50px;
+}
+
+button.red{
+	background-color: white;
+	width: 107px;
+	height: 35px;
+	border: solid 1px rgb(233,123,134);
+	color: rgb(233,123,134);
+	margin-bottom: 30px;
+}
+
+.circleGroup{
+	width: 100%;
+	text-align: center;
+	margin-left: 96px;
+}
+
+.circle{
+	float: left;
+	width: 12px;
+	height: 12px;
+	border: solid 1px rgb(146,146,146);
+	border-radius: 6px;
+	margin-right: 14px;
+}
+
+.circle:last-child{
+	margin-right: 0;
+}
+
+.circle:hover{
+	cursor: pointer;
+	background-color: rgb(146,146,146);
+}
+
+div.select{
+	background-color: rgb(146,146,146);
+}
+
+/*
+#contain7 .container{
+	width: 100%;
+	height: 521px;
+}
+
+#contain7 .container>div{
+	width: 33%;
+	height: 100%;
+	float: left;
+	border: solid 1px red;
+}
+*/
+
+#contain8{
+	margin-top: 50px;
+	clear: both;
+	height: 320px;
+	width: 100%;
+}
+
+#contain8 .container{
+	height: 100%;
+	width: 78%;
+	margin: 0 auto;
+}
+
+#contain8 .container .left{
+	float: left;
+	height: 100%;
+	width: 290px;
+}
+
+#contain8 .container .left h6{
+	font-family: "黑体", sans-serif;
+	font-size: 14px;
+	color: #231815;
+	font-weight: normal;
+	margin-bottom: 27px;
+}
+
+#contain8 .container .left p, #contain8 .container .left a{
+	font-family: "宋体", sans-serif;
+	font-size: 12px;
+	color: #9a9b9b;
+}
+
+#contain8 .container .left p{padding-bottom: 18px;}
+#contain8 .container .left img{padding-right: 10px;}
+	
+#contain8 .container .left>div{
+	height: auto;
+	position: relative;
+	margin-bottom: 40px;
+}
+#contain8 .container .left a{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	text-decoration:none;
+}
+
+#contain8 .container .right{
+	float: right;
+	height: 100%;
+	width: 650px;
+}
+
+#contain8 .container .right *{
+	border: none;
+	outline: none;
+	background-color: rgb(237,237,237);
+	font-family: "宋体", sans-serif;
+	font-size: 12px;
+	color: #938E9C;
+}
+
+#contain8 .input{
+	float: left;
+	width: 311px;
+	height: 41px;
+	margin-bottom: 13px;
+	text-indent: 10px;
+}
+
+#contain8 input{
+	height: 100%;
+	width: 70%;
+}
+
+#contain8 .margin-right{margin-right: 22px;}
+
+.dream-life{
+	clear: both;
+	margin-bottom: 17px;
+}
+
+.dream-life p{
+	text-indent: 10px;
+	line-height: 30px;
+}
+#life{
+	margin-left: 20px;
+	width: 90%;
+	height: 121px;
+}
+
+#contain8 .right button{
+	width: 100%;
+	height: 41px;
+	font-size: 14px;
+	font-family: "黑体", sans-serif;
+	color: #323333;
+}
+
+button{
+	cursor: pointer;
+}
