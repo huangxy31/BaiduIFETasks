@@ -77,10 +77,11 @@ function sortAqiData(data) {
  */
 function render(data) {
 	var chinese_num = ['一', '二', '三', '四', '五', '六', '七']
-	var resort_list = document.getElementById("resort");
+	var new_html = "";
 	for (var i=0; i<data.length; i++) {
-		resort_list.innerHTML += "<li>第" + chinese_num[i] + "名：" + data[i][0] + "空气质量：<b>" + data[i][1] + "</b></li>"
+		new_html += "<li>第" + chinese_num[i] + "名：" + data[i][0] + "空气质量：<b>" + data[i][1] + "</b></li>"
 	}
+	document.getElementById("resort").innerHTML = new_html;
 }
 
 function btnHandle() {
