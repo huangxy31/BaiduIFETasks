@@ -6,7 +6,16 @@
  *    "上海": 40
  * };
  */
-var aqiData = {};
+var aqiData = {
+	//定义length方法
+	"length" : function() {
+		var l = 0;
+		for (var data in this) {
+			l++;
+		}
+		return l;
+	}
+};
 
 
 /**
@@ -44,11 +53,11 @@ function addAqiData() {
 	var quality = document.getElementById("aqi-value-input").value.trim();
 	
 	//验证城市名是否为中英文字符
-	if(validateCity(city)){
+	if (validateCity(city)) {
 		//验证空气质量是否为 正整数
 		if (validateQuality(quality)) {
 			aqiData[city] = parseInt(quality);
-		} 
+		}
 	}
 }
 
@@ -56,16 +65,15 @@ function addAqiData() {
  * 判断城市名是否为中英文字符
  * @param {Object} quality
  */
-function validateCity(city){
-	if(city == ""){
-		alert("城市名为空");
+function validateCity(city) {
+	if (city === "") {
+		alert("城市名为空"); 
 		return false;
 	}
-	if(checkChinese(city) || checkEnglish(city)){
+	if (checkChinese(city) || checkEnglish(city)) {
 		return true;
-	}
-	else{
-		alert("请输入中文或英文城市名");
+	} else {
+        alert("请输入中文或英文城市名");
 		return false;
 	}
 }
@@ -74,20 +82,20 @@ function validateCity(city){
  * 判断输入是否是英文字符串
  * @param {String} str
  */
-function checkEnglish(str){
-	return /^[a-zA-Z]/.test(str);
+function checkEnglish(str) {
+	return (/^[a-zA-Z]/).test(str);
 }
 
 /**
  * 判断输入是否是汉字
  * @param {String} str
  */
-function checkChinese(str){
+function checkChinese(str) {
 	//判断是否包含中文：if(/^[\u4e00-\u9fa5]/.test("名字"))
 	//判断是否包含英文:   if(/^[a-zA-Z]/.test("abc"))
 	//只要编码大于255的都是汉字
 	for (var i=0; i<str.length; i++) {
-		if (str.charCodeAt(i) <= 255){
+		if (str.charCodeAt(i) <= 255) {
 			return false;
 		}
 	}
@@ -98,7 +106,7 @@ function checkChinese(str){
  * 判断空气质量输入是否有效
  * @param {Object} quality
  */
-function validateQuality(quality){
+function validateQuality(quality) {
 	try{
 		if (quality == "") {
 			//未输入的情况
@@ -136,18 +144,26 @@ function checkRate(input)
  * 渲染aqi-table表格
  */
 function renderAqiList() {
-	//只需渲染最后aqiData中的最后一个
+	//删除到aqiData没有数据时要去掉标头
+	if (aqiData.length() === 1){
+		document.getElementById("aqi-table").innerHTML = "";
+		return;
+	}
+	
 	var table_html = "";
 	var str = ""; //需要添加的html
 	//添加表头
 	table_html = "<tr><td>城市</td><td>空气质量</td><td>操作</td></tr>";
 	//添加数据
 	for (var city in aqiData) {
+		if (city === "length") {continue;}
 		table_html += "<tr><td>" + city + "</td><td>" + aqiData[city] +"</td><td><button>删除</button></td></tr>";
 	}
 	
 	
 	document.getElementById("aqi-table").innerHTML = table_html;
+	// 想办法给aqi-table中的所有删除按钮绑定事件，触发delBtnHandle函数
+	bind_del_bnts_event();
 }
 
 /**
@@ -165,7 +181,8 @@ function addBtnHandle() {
  */
 function delBtnHandle() {
   // do sth.
-
+  var city = this.parentElement.parentElement.firstChild.innerHTML;
+  delete aqiData[city];
   renderAqiList();
 }
 
@@ -175,7 +192,19 @@ function init() {
   document.getElementById("add-btn").onclick = addBtnHandle;
 
   // 想办法给aqi-table中的所有删除按钮绑定事件，触发delBtnHandle函数
+  bind_del_bnts_event();
 
+}
+
+/**
+ * 给每个按钮绑定事件
+ * 
+ */
+function bind_del_bnts_event() {
+  var del_bnts = document.getElementById("aqi-table").getElementsByTagName("button");
+  for (var i=0; i<del_bnts.length; i++) {
+	  del_bnts[i].onclick = delBtnHandle;
+  }
 }
 
 window.onload = init;
