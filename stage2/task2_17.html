@@ -7,10 +7,32 @@
     <style>
     	.aqi-chart-wrap{
     		width: 90%;
-    		height: 450px;
-    		border: 1px solid red;
+    		height: 500px;
+    		/*border: 1px solid red;*/
     		margin-top: 30px;
     		margin-left: 5%;
+    		position: relative;
+    	}
+    	
+    	.small-bar{
+    		width: 10px;
+    		border: solid 1px gainsboro;
+    		position: absolute;
+    		bottom: 0;
+    	}
+    	
+    	.medium-bar{
+    		width: 30px;
+    		border: solid 1px gainsboro;
+    		position: absolute;
+    		bottom: 0;
+    	}
+    	
+    	.big-bar{
+    		width: 50px;
+    		border: solid 1px gainsboro;
+    		position: absolute;
+    		bottom: 0;
     	}
     </style>
   </head>
@@ -29,6 +51,7 @@
   </fieldset>
 
   <div class="aqi-chart-wrap" id="city-chart">
+  	<div class="small-bar"></div>
   </div>
 </body>
 </html>

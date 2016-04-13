@@ -57,8 +57,37 @@ var pageState = {
  */
 function renderChart() {
 	//var city = pageState.nowSelectCity;
+	var bar_width = 0;//柱形的宽度
+	var bar_class = "";//每个数据柱形的div的class，分为small、medium、big
+	var scale = "";//设置拉伸比例
+	if (pageState.nowGraTime == "day") {
+		bar_class = "small-bar";
+		bar_width = 12;
+		scale = 1;
+	} else if(pageState.nowGraTime == "week") {
+		bar_class = "medium-bar";
+		bar_width = 32;
+		scale = 1/7;
+	} else {
+		bar_class = "big-bar";
+		bar_width = 52;
+		scale = 1/30;
+	}
+	var bar_colors = ["#FFCC99", "#FFFF99", "#FFFFCC", "#FF9900", "#FF9966", "#CCFF99", "#CCCC33", "#CC9933", "#99CC33", "FFCC00"];
 	var chart_div = document.getElementById("city-chart");
-	
+	chart_div.innerHTML = "";
+	var left_position = 0;
+	for (var dat in chartData) {
+		var value = (chartData[dat] * scale).toString();//数据
+		var new_bar = document.createElement("div");
+		new_bar.className = bar_class;
+		new_bar.style.height = value + "px";//设置柱形高度
+		new_bar.style.backgroundColor = bar_colors[Math.ceil(Math.random() * (bar_colors.length - 1))];//设置颜色
+		new_bar.style.left = left_position.toString() + "px";//设置左侧距离
+		left_position += bar_width;
+		new_bar.title = dat + ": " + value;//设置tooltip
+		chart_div.appendChild(new_bar);
+	}
 }
 
 /**
@@ -97,7 +126,7 @@ function citySelectChange() {
 		return;
 	}
 	// 设置对应数据
-	pageState.nowSelectCity == this.selectedIndex
+	pageState.nowSelectCity = this.selectedIndex
 	getChartData();
 	// 调用图表渲染函数
 	renderChart();
